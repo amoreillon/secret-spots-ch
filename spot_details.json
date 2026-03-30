@@ -1,0 +1,954 @@
+[
+  {
+    "name": "Silvaplana See",
+    "lat": 46.456,
+    "lon": 9.7976,
+    "sessions": 3590,
+    "riders": 412,
+    "last": "2026-02"
+  },
+  {
+    "name": "La Punta / Lake Como",
+    "lat": 46.1653,
+    "lon": 9.3779,
+    "sessions": 2733,
+    "riders": 110,
+    "last": "2026-03"
+  },
+  {
+    "name": "Colico / Lake Como",
+    "lat": 46.1409,
+    "lon": 9.3725,
+    "sessions": 2077,
+    "riders": 304,
+    "last": "2026-03"
+  },
+  {
+    "name": "Lago Di Resia",
+    "lat": 46.8053,
+    "lon": 10.5368,
+    "sessions": 1889,
+    "riders": 198,
+    "last": "2026-02"
+  },
+  {
+    "name": "Dervio",
+    "lat": 46.076758,
+    "lon": 9.298754,
+    "sessions": 1701,
+    "riders": 190,
+    "last": "2025-10"
+  },
+  {
+    "name": "Ipsach / Bielersee",
+    "lat": 47.1184,
+    "lon": 7.2227,
+    "sessions": 1444,
+    "riders": 91,
+    "last": "2026-03"
+  },
+  {
+    "name": "Langenargen DLRG / Bodensee",
+    "lat": 47.6085,
+    "lon": 9.5281,
+    "sessions": 1415,
+    "riders": 62,
+    "last": "2026-03"
+  },
+  {
+    "name": "Yvonand",
+    "lat": 46.8054,
+    "lon": 6.7362,
+    "sessions": 1225,
+    "riders": 218,
+    "last": "2026-03"
+  },
+  {
+    "name": "Pare / Lake Como",
+    "lat": 45.8584,
+    "lon": 9.37,
+    "sessions": 1115,
+    "riders": 117,
+    "last": "2026-03"
+  },
+  {
+    "name": "Sandseele / Untersee",
+    "lat": 47.69777,
+    "lon": 9.044322,
+    "sessions": 980,
+    "riders": 113,
+    "last": "2026-03"
+  },
+  {
+    "name": "St Blaise / Lac de Neuchatel",
+    "lat": 47.0106,
+    "lon": 6.9883,
+    "sessions": 903,
+    "riders": 153,
+    "last": "2026-03"
+  },
+  {
+    "name": "Seebad Fischbach / Bodensee",
+    "lat": 47.6669,
+    "lon": 9.4098,
+    "sessions": 821,
+    "riders": 46,
+    "last": "2026-03"
+  },
+  {
+    "name": "Cremia",
+    "lat": 46.08884456,
+    "lon": 9.279404522,
+    "sessions": 800,
+    "riders": 67,
+    "last": "2026-03"
+  },
+  {
+    "name": "Isleten / Urnersee",
+    "lat": 46.918934,
+    "lon": 8.596773,
+    "sessions": 476,
+    "riders": 113,
+    "last": "2026-03"
+  },
+  {
+    "name": "Dongo",
+    "lat": 46.129765,
+    "lon": 9.289758,
+    "sessions": 454,
+    "riders": 111,
+    "last": "2025-09"
+  },
+  {
+    "name": "Gera Lario / Lake Como",
+    "lat": 46.168,
+    "lon": 9.373,
+    "sessions": 425,
+    "riders": 122,
+    "last": "2026-03"
+  },
+  {
+    "name": "Cudrefin / Lac de Neuchatel",
+    "lat": 46.9587591,
+    "lon": 7.0166072,
+    "sessions": 420,
+    "riders": 36,
+    "last": "2026-03"
+  },
+  {
+    "name": "Sisikon / Urnersee",
+    "lat": 46.959444,
+    "lon": 8.603889,
+    "sessions": 420,
+    "riders": 32,
+    "last": "2025-11"
+  },
+  {
+    "name": "Murten / Murtensee",
+    "lat": 46.9275,
+    "lon": 7.1112,
+    "sessions": 405,
+    "riders": 45,
+    "last": "2026-03"
+  },
+  {
+    "name": "St. Sulpice / Lake Geneva",
+    "lat": 46.508,
+    "lon": 6.5447,
+    "sessions": 400,
+    "riders": 58,
+    "last": "2026-03"
+  },
+  {
+    "name": "Portalban / Lac de Neuchatel",
+    "lat": 46.923,
+    "lon": 6.9537,
+    "sessions": 367,
+    "riders": 96,
+    "last": "2026-03"
+  },
+  {
+    "name": "Mandello del Lario /Como Lake",
+    "lat": 45.913433,
+    "lon": 9.312984,
+    "sessions": 321,
+    "riders": 86,
+    "last": "2026-03"
+  },
+  {
+    "name": "Rohrspitz / Bodensee",
+    "lat": 47.4985,
+    "lon": 9.6287,
+    "sessions": 262,
+    "riders": 45,
+    "last": "2025-10"
+  },
+  {
+    "name": "Buehl / Alpsee",
+    "lat": 47.5724,
+    "lon": 10.1926,
+    "sessions": 248,
+    "riders": 29,
+    "last": "2026-03"
+  },
+  {
+    "name": "Saint-Joux / Bielersee",
+    "lat": 47.068087,
+    "lon": 7.110452,
+    "sessions": 245,
+    "riders": 55,
+    "last": "2026-03"
+  },
+  {
+    "name": "Vengeron / Lake Geneva",
+    "lat": 46.2462,
+    "lon": 6.1536,
+    "sessions": 232,
+    "riders": 39,
+    "last": "2025-08"
+  },
+  {
+    "name": "Excenevex / Lake Geneva",
+    "lat": 46.3498,
+    "lon": 6.3589,
+    "sessions": 214,
+    "riders": 63,
+    "last": "2026-03"
+  },
+  {
+    "name": "Walenstadt",
+    "lat": 47.119811,
+    "lon": 9.300495,
+    "sessions": 201,
+    "riders": 56,
+    "last": "2026-03"
+  },
+  {
+    "name": "Mannenbach / Untersee",
+    "lat": 47.6745,
+    "lon": 9.0498,
+    "sessions": 185,
+    "riders": 34,
+    "last": "2026-03"
+  },
+  {
+    "name": "Lago di Idro",
+    "lat": 45.8098,
+    "lon": 10.5215,
+    "sessions": 177,
+    "riders": 44,
+    "last": "2025-10"
+  },
+  {
+    "name": "Allaman",
+    "lat": 46.4639938,
+    "lon": 6.3854052,
+    "sessions": 176,
+    "riders": 18,
+    "last": "2026-03"
+  },
+  {
+    "name": "Saint-Prex",
+    "lat": 46.482911,
+    "lon": 6.458343,
+    "sessions": 165,
+    "riders": 29,
+    "last": "2026-03"
+  },
+  {
+    "name": "Lecco",
+    "lat": 45.8569784,
+    "lon": 9.3837988,
+    "sessions": 159,
+    "riders": 59,
+    "last": "2025-09"
+  },
+  {
+    "name": "Berlingen / Bodensee",
+    "lat": 47.675,
+    "lon": 9.0369,
+    "sessions": 155,
+    "riders": 52,
+    "last": "2026-03"
+  },
+  {
+    "name": "Allensbach Seegarten / Untersee",
+    "lat": 47.7126,
+    "lon": 9.0684,
+    "sessions": 139,
+    "riders": 31,
+    "last": "2026-03"
+  },
+  {
+    "name": "Br\u00fcggli / Zugersee",
+    "lat": 47.177013,
+    "lon": 8.49321,
+    "sessions": 132,
+    "riders": 44,
+    "last": "2026-01"
+  },
+  {
+    "name": "Fluelen / Urnersee",
+    "lat": 46.9165,
+    "lon": 8.6231,
+    "sessions": 125,
+    "riders": 36,
+    "last": "2026-03"
+  },
+  {
+    "name": "Ponte Caffaro / Lago di Idro",
+    "lat": 45.8116,
+    "lon": 10.5195,
+    "sessions": 125,
+    "riders": 28,
+    "last": "2025-10"
+  },
+  {
+    "name": "Forel / Lake Geneva",
+    "lat": 46.2731,
+    "lon": 6.1712,
+    "sessions": 123,
+    "riders": 21,
+    "last": "2025-10"
+  },
+  {
+    "name": "Fischbach Ost / Bodensee",
+    "lat": 47.6654,
+    "lon": 9.4217,
+    "sessions": 119,
+    "riders": 31,
+    "last": "2025-10"
+  },
+  {
+    "name": "Kehlhof / Z\u00fcrichsee",
+    "lat": 47.233849,
+    "lon": 8.734579,
+    "sessions": 109,
+    "riders": 34,
+    "last": "2025-07"
+  },
+  {
+    "name": "Thunersee",
+    "lat": 46.727058,
+    "lon": 7.629525,
+    "sessions": 104,
+    "riders": 28,
+    "last": "2026-03"
+  },
+  {
+    "name": "Estavayer-le-Lac / Lac de Neuchatel",
+    "lat": 46.8566,
+    "lon": 6.8481,
+    "sessions": 95,
+    "riders": 41,
+    "last": "2025-12"
+  },
+  {
+    "name": "Port-Choiseul a Versoix",
+    "lat": 46.2895,
+    "lon": 6.1707,
+    "sessions": 91,
+    "riders": 27,
+    "last": "2026-03"
+  },
+  {
+    "name": "Birnau / Bodensee",
+    "lat": 47.7425,
+    "lon": 9.221,
+    "sessions": 89,
+    "riders": 16,
+    "last": "2025-07"
+  },
+  {
+    "name": "Romanshorn / Bodensee",
+    "lat": 47.5738,
+    "lon": 9.3763,
+    "sessions": 87,
+    "riders": 30,
+    "last": "2026-03"
+  },
+  {
+    "name": "Dullive",
+    "lat": 46.425,
+    "lon": 6.2969,
+    "sessions": 87,
+    "riders": 11,
+    "last": "2026-03"
+  },
+  {
+    "name": "Sempachersee",
+    "lat": 47.133374,
+    "lon": 8.1898228,
+    "sessions": 75,
+    "riders": 19,
+    "last": "2026-03"
+  },
+  {
+    "name": "Berninapass",
+    "lat": 46.419162,
+    "lon": 10.003223,
+    "sessions": 73,
+    "riders": 24,
+    "last": "2026-03"
+  },
+  {
+    "name": "Lac d'Annecy Albigny",
+    "lat": 45.9,
+    "lon": 6.14,
+    "sessions": 73,
+    "riders": 14,
+    "last": "2025-10"
+  },
+  {
+    "name": "Moosbach / Rottachsee",
+    "lat": 47.6378,
+    "lon": 10.3665,
+    "sessions": 70,
+    "riders": 18,
+    "last": "2026-03"
+  },
+  {
+    "name": "Hermance / Lake Geneva",
+    "lat": 46.3038,
+    "lon": 6.2407,
+    "sessions": 69,
+    "riders": 31,
+    "last": "2025-06"
+  },
+  {
+    "name": "Langenargen Yachthafen / Bodensee",
+    "lat": 47.5893,
+    "lon": 9.5494,
+    "sessions": 59,
+    "riders": 20,
+    "last": "2026-01"
+  },
+  {
+    "name": "Le Rocheray",
+    "lat": 46.62283554,
+    "lon": 6.251733025,
+    "sessions": 57,
+    "riders": 17,
+    "last": "2025-11"
+  },
+  {
+    "name": "Lago di Lugano",
+    "lat": 45.979857,
+    "lon": 8.89487,
+    "sessions": 54,
+    "riders": 13,
+    "last": "2025-04"
+  },
+  {
+    "name": "St Jorioz",
+    "lat": 45.8438717,
+    "lon": 6.1683649,
+    "sessions": 50,
+    "riders": 10,
+    "last": "2025-06"
+  },
+  {
+    "name": "Wasserwerk / Bodensee",
+    "lat": 47.6713,
+    "lon": 9.2137,
+    "sessions": 49,
+    "riders": 21,
+    "last": "2026-03"
+  },
+  {
+    "name": "Lido di Cannobio",
+    "lat": 46.067951,
+    "lon": 8.700205,
+    "sessions": 48,
+    "riders": 14,
+    "last": "2025-08"
+  },
+  {
+    "name": "Strandbad Hoernle / Bodensee",
+    "lat": 47.6772,
+    "lon": 9.2102,
+    "sessions": 46,
+    "riders": 16,
+    "last": "2026-03"
+  },
+  {
+    "name": "Aha / Schluchsee",
+    "lat": 47.833,
+    "lon": 8.132,
+    "sessions": 46,
+    "riders": 14,
+    "last": "2025-03"
+  },
+  {
+    "name": "Klausenhorn / Bodensee",
+    "lat": 47.7485,
+    "lon": 9.1486,
+    "sessions": 46,
+    "riders": 20,
+    "last": "2025-04"
+  },
+  {
+    "name": "\u00c4gerisee",
+    "lat": 47.11279,
+    "lon": 8.62481,
+    "sessions": 43,
+    "riders": 22,
+    "last": "2024-06"
+  },
+  {
+    "name": "Abbadia Lariana",
+    "lat": 45.893612,
+    "lon": 9.333748,
+    "sessions": 42,
+    "riders": 18,
+    "last": "2026-03"
+  },
+  {
+    "name": "Berlingen / Untersee",
+    "lat": 47.6724,
+    "lon": 9.011,
+    "sessions": 41,
+    "riders": 23,
+    "last": "2025-10"
+  },
+  {
+    "name": "L\u00fcscherz",
+    "lat": 47.0478098,
+    "lon": 7.1512879,
+    "sessions": 39,
+    "riders": 12,
+    "last": "2025-09"
+  },
+  {
+    "name": "Domaso",
+    "lat": 46.1487456,
+    "lon": 9.3306203,
+    "sessions": 39,
+    "riders": 21,
+    "last": "2025-08"
+  },
+  {
+    "name": "Bouveret ",
+    "lat": 46.3894253,
+    "lon": 6.8598977,
+    "sessions": 32,
+    "riders": 11,
+    "last": "2025-09"
+  },
+  {
+    "name": "Hagnau / Bodensee",
+    "lat": 47.671,
+    "lon": 9.3273,
+    "sessions": 30,
+    "riders": 19,
+    "last": "2025-06"
+  },
+  {
+    "name": "Morlon",
+    "lat": 46.626529,
+    "lon": 7.095667,
+    "sessions": 29,
+    "riders": 10,
+    "last": "2025-06"
+  },
+  {
+    "name": "Sihlsee  Euthal",
+    "lat": 47.0971235,
+    "lon": 8.8085075,
+    "sessions": 27,
+    "riders": 4,
+    "last": "2026-03"
+  },
+  {
+    "name": "HastaKite",
+    "lat": 46.040199,
+    "lon": 9.299391,
+    "sessions": 26,
+    "riders": 2,
+    "last": "2025-08"
+  },
+  {
+    "name": "Feldberg Snowkite",
+    "lat": 47.86489,
+    "lon": 8.02245,
+    "sessions": 24,
+    "riders": 4,
+    "last": "2026-02"
+  },
+  {
+    "name": "Altnau / Bodensee",
+    "lat": 47.6227,
+    "lon": 9.2694,
+    "sessions": 23,
+    "riders": 11,
+    "last": "2025-09"
+  },
+  {
+    "name": "Refuge / Lac De Neuchatel",
+    "lat": 46.8058,
+    "lon": 6.743,
+    "sessions": 22,
+    "riders": 11,
+    "last": "2025-08"
+  },
+  {
+    "name": "Turtmann",
+    "lat": 46.30457,
+    "lon": 7.711892,
+    "sessions": 22,
+    "riders": 3,
+    "last": "2025-05"
+  },
+  {
+    "name": "Pensier",
+    "lat": 46.846826,
+    "lon": 7.141963,
+    "sessions": 21,
+    "riders": 3,
+    "last": "2021-12"
+  },
+  {
+    "name": "Germignaga",
+    "lat": 45.9964978,
+    "lon": 8.7238864,
+    "sessions": 21,
+    "riders": 5,
+    "last": "2025-07"
+  },
+  {
+    "name": "Petersthal / Rottachsee",
+    "lat": 47.6367,
+    "lon": 10.3784,
+    "sessions": 17,
+    "riders": 9,
+    "last": "2024-09"
+  },
+  {
+    "name": "Brambr\u00fcesch / Chur",
+    "lat": 46.804588,
+    "lon": 9.49554,
+    "sessions": 15,
+    "riders": 5,
+    "last": "2026-03"
+  },
+  {
+    "name": "Alpnach / Alpnachersee",
+    "lat": 46.9567382,
+    "lon": 8.2821434,
+    "sessions": 15,
+    "riders": 3,
+    "last": "2026-03"
+  },
+  {
+    "name": "Lindau Insel / Bodensee",
+    "lat": 47.5467,
+    "lon": 9.6764,
+    "sessions": 14,
+    "riders": 10,
+    "last": "2024-04"
+  },
+  {
+    "name": "Ueberlingen / Bodensee",
+    "lat": 47.7595,
+    "lon": 9.174,
+    "sessions": 11,
+    "riders": 6,
+    "last": "2024-07"
+  },
+  {
+    "name": "La T\u00e8ne",
+    "lat": 47.0048982,
+    "lon": 7.0192934,
+    "sessions": 10,
+    "riders": 3,
+    "last": "2026-03"
+  },
+  {
+    "name": "Scherzingen / Bodensee",
+    "lat": 47.6369,
+    "lon": 9.2228,
+    "sessions": 9,
+    "riders": 7,
+    "last": "2024-08"
+  },
+  {
+    "name": "Lago Maggiore",
+    "lat": 45.8255331,
+    "lon": 8.5955716,
+    "sessions": 9,
+    "riders": 7,
+    "last": "2025-02"
+  },
+  {
+    "name": "Hochwang",
+    "lat": 46.859061,
+    "lon": 9.676611,
+    "sessions": 9,
+    "riders": 5,
+    "last": "2026-03"
+  },
+  {
+    "name": "Ludwigshafen Camping / Bodensee",
+    "lat": 47.8173,
+    "lon": 9.0413,
+    "sessions": 7,
+    "riders": 4,
+    "last": "2021-05"
+  },
+  {
+    "name": "Beckenried Kite Addicted",
+    "lat": 46.96794701538615,
+    "lon": 8.481287000936105,
+    "sessions": 7,
+    "riders": 3,
+    "last": "2025-03"
+  },
+  {
+    "name": "Immenstaad / Bodensee",
+    "lat": 47.6603,
+    "lon": 9.3569,
+    "sessions": 6,
+    "riders": 4,
+    "last": "2024-11"
+  },
+  {
+    "name": "Mammern / Untersee",
+    "lat": 47.6479,
+    "lon": 8.9163,
+    "sessions": 6,
+    "riders": 4,
+    "last": "2024-12"
+  },
+  {
+    "name": "Musso",
+    "lat": 46.1085062,
+    "lon": 9.2782532,
+    "sessions": 6,
+    "riders": 2,
+    "last": "2025-07"
+  },
+  {
+    "name": "Lungernsee",
+    "lat": 46.789352,
+    "lon": 8.15849,
+    "sessions": 5,
+    "riders": 5,
+    "last": "2023-07"
+  },
+  {
+    "name": "Sailing / Bodensee",
+    "lat": 47.6663,
+    "lon": 9.192,
+    "sessions": 5,
+    "riders": 2,
+    "last": "2021-08"
+  },
+  {
+    "name": "Lac des Rousses",
+    "lat": 46.5021562,
+    "lon": 6.0851651,
+    "sessions": 5,
+    "riders": 3,
+    "last": "2025-11"
+  },
+  {
+    "name": "Maccagno",
+    "lat": 46.0409074,
+    "lon": 8.7315784,
+    "sessions": 5,
+    "riders": 5,
+    "last": "2024-08"
+  },
+  {
+    "name": "Kreuzlingen / Bodensee",
+    "lat": 47.6479,
+    "lon": 9.1965,
+    "sessions": 4,
+    "riders": 4,
+    "last": "2023-07"
+  },
+  {
+    "name": "Wasserburg / Bodensee",
+    "lat": 47.566,
+    "lon": 9.64,
+    "sessions": 4,
+    "riders": 4,
+    "last": "2024-03"
+  },
+  {
+    "name": "Langenargen Kurhotel / Bodensee",
+    "lat": 47.5951,
+    "lon": 9.5425,
+    "sessions": 4,
+    "riders": 4,
+    "last": "2024-03"
+  },
+  {
+    "name": "Radolfzell / Zeller See",
+    "lat": 47.7366,
+    "lon": 8.9557,
+    "sessions": 4,
+    "riders": 4,
+    "last": "2021-04"
+  },
+  {
+    "name": "Piona",
+    "lat": 46.1235,
+    "lon": 9.34655,
+    "sessions": 4,
+    "riders": 2,
+    "last": "2024-09"
+  },
+  {
+    "name": "Horn",
+    "lat": 47.2117746,
+    "lon": 8.7061551,
+    "sessions": 4,
+    "riders": 2,
+    "last": "2025-10"
+  },
+  {
+    "name": "Kesswil / Bodensee",
+    "lat": 47.5996429,
+    "lon": 9.3164461,
+    "sessions": 4,
+    "riders": 3,
+    "last": "2025-05"
+  },
+  {
+    "name": "Seemoos - W\u00fcrttembergischer Yacht Club",
+    "lat": 47.6566588,
+    "lon": 9.4363419,
+    "sessions": 4,
+    "riders": 3,
+    "last": "2025-04"
+  },
+  {
+    "name": "Daubensee",
+    "lat": 46.4153,
+    "lon": 7.6204,
+    "sessions": 3,
+    "riders": 2,
+    "last": "2025-03"
+  },
+  {
+    "name": "Hegne / Gnadensee",
+    "lat": 47.7039,
+    "lon": 9.0959,
+    "sessions": 3,
+    "riders": 2,
+    "last": "2023-08"
+  },
+  {
+    "name": "Bivio / Lunghin",
+    "lat": 46.44802777,
+    "lon": 9.659277391,
+    "sessions": 3,
+    "riders": 3,
+    "last": "2024-01"
+  },
+  {
+    "name": "Steckborn West / Untersee",
+    "lat": 47.6592,
+    "lon": 8.9705,
+    "sessions": 2,
+    "riders": 2,
+    "last": "2024-03"
+  },
+  {
+    "name": "Sufner See",
+    "lat": 46.566133,
+    "lon": 9.359696,
+    "sessions": 2,
+    "riders": 1,
+    "last": "2024-08"
+  },
+  {
+    "name": "Vevey",
+    "lat": 46.460842,
+    "lon": 6.8352301,
+    "sessions": 2,
+    "riders": 2,
+    "last": "2025-03"
+  },
+  {
+    "name": "Klinik / Bodensee",
+    "lat": 47.6648,
+    "lon": 9.1991,
+    "sessions": 1,
+    "riders": 1,
+    "last": "2021-03"
+  },
+  {
+    "name": "Seebruecke / Bodensee",
+    "lat": 47.6634,
+    "lon": 9.2084,
+    "sessions": 1,
+    "riders": 1,
+    "last": "2023-07"
+  },
+  {
+    "name": "Steckborn Ost / Untersee",
+    "lat": 47.669,
+    "lon": 8.9917,
+    "sessions": 1,
+    "riders": 1,
+    "last": "2021-01"
+  },
+  {
+    "name": "Ludwigshafen / Bodensee",
+    "lat": 47.8142,
+    "lon": 9.0636,
+    "sessions": 1,
+    "riders": 1,
+    "last": "2017-08"
+  },
+  {
+    "name": "Nussdorf Surfclub / Bodensee",
+    "lat": 47.7507,
+    "lon": 9.1944,
+    "sessions": 1,
+    "riders": 1,
+    "last": "2020-09"
+  },
+  {
+    "name": "Julier",
+    "lat": 46.467415,
+    "lon": 9.766426,
+    "sessions": 1,
+    "riders": 1,
+    "last": "2022-08"
+  },
+  {
+    "name": "Sorico - Lake Como",
+    "lat": 46.170265,
+    "lon": 9.3807518,
+    "sessions": 1,
+    "riders": 1,
+    "last": "2025-08"
+  },
+  {
+    "name": "Davosersee",
+    "lat": 46.81737,
+    "lon": 9.84734,
+    "sessions": 1,
+    "riders": 1,
+    "last": "2025-10"
+  },
+  {
+    "name": "Avers",
+    "lat": 46.444635,
+    "lon": 9.579758,
+    "sessions": 0,
+    "riders": 0,
+    "last": "none"
+  },
+  {
+    "name": "Friedrichshafener Bucht",
+    "lat": 47.6260117,
+    "lon": 9.4770515,
+    "sessions": 0,
+    "riders": 0,
+    "last": "none"
+  }
+]
