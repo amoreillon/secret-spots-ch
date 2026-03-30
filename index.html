@@ -133,6 +133,10 @@
       <label>Min. suspicion score: <strong id="score-val">5</strong></label>
       <input type="range" id="score-filter" min="5" max="55" step="5" value="5">
       <div id="filter-info">Showing <span id="shown-count">0</span> spots</div>
+      <label style="margin-top:10px; display:flex; align-items:center; gap:6px; cursor:pointer;">
+        <input type="checkbox" id="hide-snow" checked>
+        <span style="font-size:12px; color:#8b949e;">Hide snow kite spots</span>
+      </label>
     </div>
     <div id="spot-list"></div>
   </div>
@@ -147,6 +151,15 @@
 </div>
 
 <script>
+// Spots that are likely snow kiting, not water kiting
+const SNOW_SPOTS = new Set([
+  "Feldberg Snowkite",
+  "Brambrüesch / Chur",
+  "Berninapass",
+  "Hochwang",
+  "Daubensee",
+]);
+
 const SPOTS = [{"name": "Hochwang", "lat": 46.859061, "lon": 9.676611, "sessions": 9, "riders": 5, "last": "2026-03", "score": 54.6, "famous": false}, {"name": "Vevey", "lat": 46.460842, "lon": 6.8352301, "sessions": 2, "riders": 2, "last": "2025-03", "score": 49.8, "famous": false}, {"name": "Lac des Rousses", "lat": 46.5021562, "lon": 6.0851651, "sessions": 5, "riders": 3, "last": "2025-11", "score": 49.5, "famous": false}, {"name": "Kesswil / Bodensee", "lat": 47.5996429, "lon": 9.3164461, "sessions": 4, "riders": 3, "last": "2025-05", "score": 43.4, "famous": false}, {"name": "Berlingen / Untersee", "lat": 47.6724, "lon": 9.011, "sessions": 41, "riders": 23, "last": "2025-10", "score": 40.8, "famous": false}, {"name": "Seemoos - W\u00fcrttembergischer Yacht Club", "lat": 47.6566588, "lon": 9.4363419, "sessions": 4, "riders": 3, "last": "2025-04", "score": 40.3, "famous": false}, {"name": "Abbadia Lariana", "lat": 45.893612, "lon": 9.333748, "sessions": 42, "riders": 18, "last": "2026-03", "score": 39.3, "famous": false}, {"name": "Horn", "lat": 47.2117746, "lon": 8.7061551, "sessions": 4, "riders": 2, "last": "2025-10", "score": 39.3, "famous": false}, {"name": "Wasserwerk / Bodensee", "lat": 47.6713, "lon": 9.2137, "sessions": 49, "riders": 21, "last": "2026-03", "score": 38.7, "famous": false}, {"name": "Hagnau / Bodensee", "lat": 47.671, "lon": 9.3273, "sessions": 30, "riders": 19, "last": "2025-06", "score": 37.2, "famous": false}, {"name": "Domaso", "lat": 46.1487456, "lon": 9.3306203, "sessions": 39, "riders": 21, "last": "2025-08", "score": 35.2, "famous": false}, {"name": "Lago Maggiore", "lat": 45.8255331, "lon": 8.5955716, "sessions": 9, "riders": 7, "last": "2025-02", "score": 35.0, "famous": false}, {"name": "Altnau / Bodensee", "lat": 47.6227, "lon": 9.2694, "sessions": 23, "riders": 11, "last": "2025-09", "score": 34.2, "famous": false}, {"name": "Refuge / Lac De Neuchatel", "lat": 46.8058, "lon": 6.743, "sessions": 22, "riders": 11, "last": "2025-08", "score": 33.9, "famous": false}, {"name": "Daubensee", "lat": 46.4153, "lon": 7.6204, "sessions": 3, "riders": 2, "last": "2025-03", "score": 33.1, "famous": false}, {"name": "Brambr\u00fcesch / Chur", "lat": 46.804588, "lon": 9.49554, "sessions": 15, "riders": 5, "last": "2026-03", "score": 32.3, "famous": false}, {"name": "Strandbad Hoernle / Bodensee", "lat": 47.6772, "lon": 9.2102, "sessions": 46, "riders": 16, "last": "2026-03", "score": 31.6, "famous": false}, {"name": "Estavayer-le-Lac / Lac de Neuchatel", "lat": 46.8566, "lon": 6.8481, "sessions": 95, "riders": 41, "last": "2025-12", "score": 30.6, "famous": false}, {"name": "La T\u00e8ne", "lat": 47.0048982, "lon": 7.0192934, "sessions": 10, "riders": 3, "last": "2026-03", "score": 29.4, "famous": false}, {"name": "Romanshorn / Bodensee", "lat": 47.5738, "lon": 9.3763, "sessions": 87, "riders": 30, "last": "2026-03", "score": 28.5, "famous": false}, {"name": "Berninapass", "lat": 46.419162, "lon": 10.003223, "sessions": 73, "riders": 24, "last": "2026-03", "score": 28.1, "famous": false}, {"name": "Langenargen Yachthafen / Bodensee", "lat": 47.5893, "lon": 9.5494, "sessions": 59, "riders": 20, "last": "2026-01", "score": 27.4, "famous": false}, {"name": "Mammern / Untersee", "lat": 47.6479, "lon": 8.9163, "sessions": 6, "riders": 4, "last": "2024-12", "score": 24.7, "famous": false}, {"name": "Port-Choiseul a Versoix", "lat": 46.2895, "lon": 6.1707, "sessions": 91, "riders": 27, "last": "2026-03", "score": 24.3, "famous": false}, {"name": "Hermance / Lake Geneva", "lat": 46.3038, "lon": 6.2407, "sessions": 69, "riders": 31, "last": "2025-06", "score": 24.2, "famous": false}, {"name": "Bouveret ", "lat": 46.3894253, "lon": 6.8598977, "sessions": 32, "riders": 11, "last": "2025-09", "score": 24.1, "famous": false}, {"name": "Berlingen / Bodensee", "lat": 47.675, "lon": 9.0369, "sessions": 155, "riders": 52, "last": "2026-03", "score": 23.1, "famous": false}, {"name": "Br\u00fcggli / Zugersee", "lat": 47.177013, "lon": 8.49321, "sessions": 132, "riders": 44, "last": "2026-01", "score": 22.5, "famous": false}, {"name": "Moosbach / Rottachsee", "lat": 47.6378, "lon": 10.3665, "sessions": 70, "riders": 18, "last": "2026-03", "score": 22.1, "famous": false}, {"name": "Le Rocheray", "lat": 46.62283554, "lon": 6.251733025, "sessions": 57, "riders": 17, "last": "2025-11", "score": 22.0, "famous": false}, {"name": "Immenstaad / Bodensee", "lat": 47.6603, "lon": 9.3569, "sessions": 6, "riders": 4, "last": "2024-11", "score": 22.0, "famous": false}, {"name": "Musso", "lat": 46.1085062, "lon": 9.2782532, "sessions": 6, "riders": 2, "last": "2025-07", "score": 22.0, "famous": false}, {"name": "Fluelen / Urnersee", "lat": 46.9165, "lon": 8.6231, "sessions": 125, "riders": 36, "last": "2026-03", "score": 21.6, "famous": false}, {"name": "Sempachersee", "lat": 47.133374, "lon": 8.1898228, "sessions": 75, "riders": 19, "last": "2026-03", "score": 21.5, "famous": false}, {"name": "Klausenhorn / Bodensee", "lat": 47.7485, "lon": 9.1486, "sessions": 46, "riders": 20, "last": "2025-04", "score": 21.4, "famous": false}, {"name": "Thunersee", "lat": 46.727058, "lon": 7.629525, "sessions": 104, "riders": 28, "last": "2026-03", "score": 21.3, "famous": false}, {"name": "L\u00fcscherz", "lat": 47.0478098, "lon": 7.1512879, "sessions": 39, "riders": 12, "last": "2025-09", "score": 21.3, "famous": false}, {"name": "Beckenried Kite Addicted", "lat": 46.96794701538615, "lon": 8.481287000936105, "sessions": 7, "riders": 3, "last": "2025-03", "score": 21.1, "famous": false}, {"name": "Maccagno", "lat": 46.0409074, "lon": 8.7315784, "sessions": 5, "riders": 5, "last": "2024-08", "score": 20.6, "famous": false}, {"name": "Morlon", "lat": 46.626529, "lon": 7.095667, "sessions": 29, "riders": 10, "last": "2025-06", "score": 20.3, "famous": false}, {"name": "Alpnach / Alpnachersee", "lat": 46.9567382, "lon": 8.2821434, "sessions": 15, "riders": 3, "last": "2026-03", "score": 19.4, "famous": false}, {"name": "Lecco", "lat": 45.8569784, "lon": 9.3837988, "sessions": 159, "riders": 59, "last": "2025-09", "score": 19.0, "famous": false}, {"name": "Lido di Cannobio", "lat": 46.067951, "lon": 8.700205, "sessions": 48, "riders": 14, "last": "2025-08", "score": 18.7, "famous": false}, {"name": "Excenevex / Lake Geneva", "lat": 46.3498, "lon": 6.3589, "sessions": 214, "riders": 63, "last": "2026-03", "score": 16.8, "famous": false}, {"name": "Walenstadt", "lat": 47.119811, "lon": 9.300495, "sessions": 201, "riders": 56, "last": "2026-03", "score": 16.7, "famous": false}, {"name": "Kehlhof / Z\u00fcrichsee", "lat": 47.233849, "lon": 8.734579, "sessions": 109, "riders": 34, "last": "2025-07", "score": 16.3, "famous": false}, {"name": "Allensbach Seegarten / Untersee", "lat": 47.7126, "lon": 9.0684, "sessions": 139, "riders": 31, "last": "2026-03", "score": 16.1, "famous": false}, {"name": "Scherzingen / Bodensee", "lat": 47.6369, "lon": 9.2228, "sessions": 9, "riders": 7, "last": "2024-08", "score": 15.9, "famous": false}, {"name": "Fischbach Ost / Bodensee", "lat": 47.6654, "lon": 9.4217, "sessions": 119, "riders": 31, "last": "2025-10", "score": 15.7, "famous": false}, {"name": "Feldberg Snowkite", "lat": 47.86489, "lon": 8.02245, "sessions": 24, "riders": 4, "last": "2026-02", "score": 15.2, "famous": false}, {"name": "Germignaga", "lat": 45.9964978, "lon": 8.7238864, "sessions": 21, "riders": 5, "last": "2025-07", "score": 15.2, "famous": false}, {"name": "Sihlsee  Euthal", "lat": 47.0971235, "lon": 8.8085075, "sessions": 27, "riders": 4, "last": "2026-03", "score": 14.0, "famous": false}, {"name": "Aha / Schluchsee", "lat": 47.833, "lon": 8.132, "sessions": 46, "riders": 14, "last": "2025-03", "score": 13.8, "famous": false}, {"name": "Ponte Caffaro / Lago di Idro", "lat": 45.8116, "lon": 10.5195, "sessions": 125, "riders": 28, "last": "2025-10", "score": 13.3, "famous": false}, {"name": "Lac d'Annecy Albigny", "lat": 45.9, "lon": 6.14, "sessions": 73, "riders": 14, "last": "2025-10", "score": 13.0, "famous": false}, {"name": "Petersthal / Rottachsee", "lat": 47.6367, "lon": 10.3784, "sessions": 17, "riders": 9, "last": "2024-09", "score": 12.8, "famous": false}, {"name": "Lago di Idro", "lat": 45.8098, "lon": 10.5215, "sessions": 177, "riders": 44, "last": "2025-10", "score": 12.7, "famous": false}, {"name": "Piona", "lat": 46.1235, "lon": 9.34655, "sessions": 4, "riders": 2, "last": "2024-09", "score": 12.4, "famous": false}, {"name": "Saint-Prex", "lat": 46.482911, "lon": 6.458343, "sessions": 165, "riders": 29, "last": "2026-03", "score": 11.8, "famous": false}, {"name": "Mannenbach / Untersee", "lat": 47.6745, "lon": 9.0498, "sessions": 185, "riders": 34, "last": "2026-03", "score": 11.6, "famous": false}, {"name": "Lago di Lugano", "lat": 45.979857, "lon": 8.89487, "sessions": 54, "riders": 13, "last": "2025-04", "score": 11.6, "famous": false}, {"name": "Saint-Joux / Bielersee", "lat": 47.068087, "lon": 7.110452, "sessions": 245, "riders": 55, "last": "2026-03", "score": 11.4, "famous": false}, {"name": "St Jorioz", "lat": 45.8438717, "lon": 6.1683649, "sessions": 50, "riders": 10, "last": "2025-06", "score": 11.2, "famous": false}, {"name": "Dullive", "lat": 46.425, "lon": 6.2969, "sessions": 87, "riders": 11, "last": "2026-03", "score": 10.4, "famous": false}, {"name": "Sufner See", "lat": 46.566133, "lon": 9.359696, "sessions": 2, "riders": 1, "last": "2024-08", "score": 10.4, "famous": false}, {"name": "Forel / Lake Geneva", "lat": 46.2731, "lon": 6.1712, "sessions": 123, "riders": 21, "last": "2025-10", "score": 10.2, "famous": false}, {"name": "Birnau / Bodensee", "lat": 47.7425, "lon": 9.221, "sessions": 89, "riders": 16, "last": "2025-07", "score": 9.9, "famous": false}, {"name": "Mandello del Lario /Como Lake", "lat": 45.913433, "lon": 9.312984, "sessions": 321, "riders": 86, "last": "2026-03", "score": 9.6, "famous": false}, {"name": "Ueberlingen / Bodensee", "lat": 47.7595, "lon": 9.174, "sessions": 11, "riders": 6, "last": "2024-07", "score": 8.9, "famous": false}, {"name": "Turtmann", "lat": 46.30457, "lon": 7.711892, "sessions": 22, "riders": 3, "last": "2025-05", "score": 7.6, "famous": false}, {"name": "Portalban / Lac de Neuchatel", "lat": 46.923, "lon": 6.9537, "sessions": 367, "riders": 96, "last": "2026-03", "score": 7.0, "famous": false}, {"name": "Allaman", "lat": 46.4639938, "lon": 6.3854052, "sessions": 176, "riders": 18, "last": "2026-03", "score": 6.6, "famous": false}, {"name": "Rohrspitz / Bodensee", "lat": 47.4985, "lon": 9.6287, "sessions": 262, "riders": 45, "last": "2025-10", "score": 6.5, "famous": false}, {"name": "Vengeron / Lake Geneva", "lat": 46.2462, "lon": 6.1536, "sessions": 232, "riders": 39, "last": "2025-08", "score": 6.4, "famous": false}, {"name": "Buehl / Alpsee", "lat": 47.5724, "lon": 10.1926, "sessions": 248, "riders": 29, "last": "2026-03", "score": 5.9, "famous": false}, {"name": "\u00c4gerisee", "lat": 47.11279, "lon": 8.62481, "sessions": 43, "riders": 22, "last": "2024-06", "score": 5.8, "famous": false}, {"name": "HastaKite", "lat": 46.040199, "lon": 9.299391, "sessions": 26, "riders": 2, "last": "2025-08", "score": 5.2, "famous": false}];
 
 function scoreColor(score) {
@@ -177,6 +190,9 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   subdomains: 'abcd',
   maxZoom: 19
 }).addTo(map);
+
+// Tag snow spots
+SPOTS.forEach(s => s.snow = SNOW_SPOTS.has(s.name));
 
 // Build markers
 const markers = [];
@@ -232,10 +248,11 @@ const scoreValEl = document.getElementById('score-val');
 const shownCountEl = document.getElementById('shown-count');
 
 function renderList(minScore) {
+  const hideSnow = document.getElementById('hide-snow').checked;
   list.innerHTML = '';
   let shown = 0;
   SPOTS.forEach((spot, i) => {
-    const visible = spot.score >= minScore;
+    const visible = spot.score >= minScore && !(hideSnow && spot.snow);
     // Show/hide marker
     if (visible) {
       if (!map.hasLayer(markers[i])) markers[i].addTo(map);
@@ -251,7 +268,7 @@ function renderList(minScore) {
     div.innerHTML = `
       <div class="spot-rank">${shown}</div>
       <div class="spot-info">
-        <div class="spot-name">${spot.name}</div>
+        <div class="spot-name">${spot.name}${spot.snow ? ' <span title="Likely snow kite" style="font-size:11px">❄️</span>' : ''}</div>
         <div class="spot-meta">${spot.sessions} sessions · ${spot.riders} riders · last ${spot.last}</div>
       </div>
       <div class="score-badge ${scoreBadgeClass(spot.score)}">${spot.score}</div>
@@ -270,6 +287,10 @@ filterSlider.addEventListener('input', () => {
   const val = parseInt(filterSlider.value);
   scoreValEl.textContent = val;
   renderList(val);
+});
+
+document.getElementById('hide-snow').addEventListener('change', () => {
+  renderList(parseInt(filterSlider.value));
 });
 
 renderList(5);
